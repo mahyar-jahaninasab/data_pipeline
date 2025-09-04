@@ -16,12 +16,15 @@ RUN apt-get update \
 
 WORKDIR /workspace
 
+COPY .env /workspace/.env
+
 COPY pyproject.toml setup.cfg* /workspace/
+
+COPY src/ /workspace/src/
 
 RUN pip install --no-cache-dir setuptools wheel \
  && pip install --no-cache-dir .
 
-COPY src/ /workspace/src/
-RUN echo "devcontainer" >> /root/.pipeline
+VOLUME ["/workspace/data", "/workspace/logs"]
 
-SHELL ["/bin/bash", "-lc"]
+CMD ["python", "src/manager.py"]

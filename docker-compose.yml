@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  llm-data-pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: llm-data-pipeline:latest
+    env_file:
+      - .env
+    volumes:
+      - ./data:/workspace/data
+      - ./logs:/workspace/logs
+    command: ["python", "src/manager.py"]

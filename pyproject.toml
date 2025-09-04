@@ -27,7 +27,6 @@ dependencies = [
   "huggingface-hub==0.34.4",
   "idna==3.10",
   "langdetect==1.0.9",
-  "mainpipe @ git+https://github.com/mahyar-jahaninasab/data_pipeline.git@9dbe72349cc96ec70634d2782309181ae27a84ed",
   "multidict==6.6.4",
   "multiprocess==0.70.15",
   "numpy==2.3.2",
@@ -50,6 +49,7 @@ dependencies = [
   "xxhash==3.5.0",
   "yarl==1.20.1",
   "zstandard==0.24.0",
+  "python-dotenv==1.1.1"
 ]
 [tool.setuptools.packages.find]
 where = ["src"]

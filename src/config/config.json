@@ -1,0 +1,158 @@
+{
+  "datasets": {
+    "pubmed": {
+      "dataset_type": "pubmed",
+      "dataset_name": "monology/pile-uncopyrighted",
+      "dataset_config": null,
+      "size_mb": 50,
+      "filter_condition": "PubMed Abstracts",
+      "output_dir": "./data/raw",
+      "cleaning": {
+        "clean": true,
+        "expected_language": "en",
+        "check_copyright": true,
+        "min_text_length": 100,
+        "check_license": null,
+        "allowed_license": null,
+        "domain": "medical",
+        "settings": null,
+        "vocabulary": "./src/config/config_medical.json",
+        "required_fields": []
+      }
+    },
+    "c4": {
+      "dataset_type": "c4",
+      "domain": "en",
+      "dataset_name": "allenai/c4",
+      "dataset_config": "en",
+      "size_mb": 50,
+      "filter_condition": null,
+      "output_dir": "./data/raw",
+      "cleaning": {
+        "clean": true,
+        "expected_language": "en",
+        "check_copyright": false,
+        "min_text_length": 50,
+        "check_license": null,
+        "allowed_license": null,
+        "domain": "en",
+        "settings": null,
+        "vocabulary": null,
+        "required_fields": []
+      }
+    },
+    "github": {
+      "dataset_type": "github",
+      "domain": "code",
+      "dataset_name": "monology/pile-uncopyrighted",
+      "dataset_config": null,
+      "size_mb": 50,
+      "filter_condition": "Github",
+      "output_dir": "./data/raw",
+      "cleaning": {
+        "clean": true,
+        "expected_language": "en",
+        "check_copyright": true,
+        "min_text_length": 100,
+        "check_license": true,
+        "allowed_license": null,
+        "domain": "code",
+        "settings": null,
+        "vocabulary": null,
+        "required_fields": []
+      }
+    },
+    "wikipedia": {
+      "dataset_type": "wikipedia",
+      "domain": "en",
+      "dataset_name": "monology/pile-uncopyrighted",
+      "dataset_config": null,
+      "size_mb": 20,
+      "filter_condition": "Wikipedia (en)",
+      "output_dir": "./data/raw",
+      "cleaning": {
+        "clean": true,
+        "expected_language": "en",
+        "check_copyright": false,
+        "min_text_length": 100,
+        "check_license": null,
+        "allowed_license": null,
+        "domain": "en",
+        "settings": null,
+        "vocabulary": null,
+        "required_fields": []
+      }
+    }
+  },
+  "post_processing": {
+    "pubmed": {
+      "dataset_type": "pubmed",
+      "output_dir": "./data/tokenized",
+      "tokenizer_vocab": "./tokenizer/vocab.json",
+      "tokenizer_merges": "./tokenizer/merges.txt",
+      "reading_dir": "./data/cleaned",
+      "shard_size_bytes": 104857600,
+      "length_buckets": null,
+      "curriculum_schedule": null,
+      "seed": 42,
+      "vocab_size": 40000
+    },
+    "c4": {
+      "dataset_type": "c4",
+      "output_dir": "./data/tokenized",
+      "tokenizer_vocab": "./tokenizer/vocab.json",
+      "tokenizer_merges": "./tokenizer/merges.txt",
+      "reading_dir": "./data/cleaned",
+      "shard_size_bytes": 104857600,
+      "length_buckets": null,
+      "curriculum_schedule": null,
+      "seed": 42,
+      "vocab_size": 32000
+    },
+    "github": {
+      "dataset_type": "github",
+      "output_dir": "./data/tokenized",
+      "tokenizer_vocab": "./tokenizer/vocab.json",
+      "tokenizer_merges": "./tokenizer/merges.txt",
+      "reading_dir": "./data/cleaned",
+      "shard_size_bytes": 104857600,
+      "length_buckets": null,
+      "curriculum_schedule": null,
+      "seed": 42,
+      "vocab_size": 50000
+    },
+    "wikipedia": {
+      "dataset_type": "wikipedia",
+      "output_dir": "./data/tokenized",
+      "tokenizer_vocab": "./tokenizer/vocab.json",
+      "tokenizer_merges": "./tokenizer/merges.txt",
+      "reading_dir": "./data/cleaned",
+      "shard_size_bytes": 104857600,
+      "length_buckets": null,
+      "curriculum_schedule": null,
+      "seed": 42,
+      "vocab_size": 28000
+    },
+    "curriculum_schedule": {
+    "phase_1": {
+      "pubmed": 0.4,
+      "c4": 0.3,
+      "github": 0.2,
+      "wikipedia": 0.1
+    },
+    "phase_2": {
+      "pubmed": 0.3,
+      "c4": 0.4,
+      "github": 0.2,
+      "wikipedia": 0.1
+    },
+    "final": {
+      "pubmed": 0.25,
+      "c4": 0.25,
+      "github": 0.25,
+      "wikipedia": 0.25
+    }
+  }
+      
+  }
+}

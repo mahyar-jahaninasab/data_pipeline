@@ -1,0 +1,6 @@
+mainpipe/data/
+__pycache__/
+venv/
+
+.test/
+mainpipe.egg-info/

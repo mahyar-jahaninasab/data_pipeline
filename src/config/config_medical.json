@@ -1,0 +1,52 @@
+{
+    "clinical_terms": [
+      "patient", "clinical", "medical", "hospital", "clinic",
+      "physician", "nurse", "doctor", "treatment", "therapy",
+      "diagnosis", "prognosis", "surgery", "procedure", "examination"
+    ],
+    "disease_terms": [
+      "disease", "disorder", "condition", "syndrome", "pathology",
+      "infection", "inflammation", "cancer", "tumor", "lesion",
+      "injury", "trauma", "complication", "symptom", "sign"
+    ],
+    "research_terms": [
+      "study", "trial", "research", "investigation", "analysis",
+      "randomized", "controlled", "cohort", "case-control",
+      "meta-analysis", "systematic review", "evidence-based"
+    ],
+    "anatomy_terms": [
+      "heart", "lung", "brain", "liver", "kidney", "blood",
+      "tissue", "organ", "cell", "muscle", "bone", "nerve"
+    ],
+    "pharmacology_terms": [
+      "drug", "medication", "pharmaceutical", "dosage", "prescription",
+      "therapy", "intervention", "treatment", "protocol"
+    ],
+    "anatomy": [
+      "heart", "lung", "brain", "liver", "kidney", "blood", "tissue", "organ", "cell"
+    ],
+    "disorders": [
+      "disease", "disorder", "syndrome", "condition", "pathology", "cancer", "tumor"
+    ],
+    "procedures": [
+      "surgery", "procedure", "operation", "intervention", "therapy", "treatment"
+    ],
+    "chemicals": [
+      "drug", "medication", "pharmaceutical", "compound", "substance"
+    ],
+    "organisms": [
+      "bacteria", "virus", "pathogen", "microorganism", "infection"
+    ],
+    "devices": [
+      "implant", "prosthesis", "catheter", "stent", "pacemaker"
+    ],
+    "phenomena": [
+      "symptom", "sign", "manifestation", "complication", "adverse"
+    ],
+    "occupations": [
+      "physician", "nurse", "surgeon", "doctor", "clinician", "therapist"
+    ],
+    "organizations": [
+      "hospital", "clinic", "facility", "institution", "department"
+    ]
+}

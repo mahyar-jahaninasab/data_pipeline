@@ -1,0 +1,8 @@
+{
+	"name": "pipeline",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "."
+	},
+	"remoteUser": "root"
+}

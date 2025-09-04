@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mainpipe"
+version = "0.1.0"
+description = "Data acquisition pipeline for curated datasets"
+authors = [
+    { name = "Mahyar Jahani nasab", email = "jahaninasab.mahyar@gmail.com" }
+]
+dependencies = [
+  "aiofiles==24.1.0",
+  "aiohappyeyeballs==2.6.1",
+  "aiohttp==3.12.15",
+  "aiosignal==1.4.0",
+  "attrs==25.3.0",
+  "certifi==2025.8.3",
+  "charset-normalizer==3.4.3",
+  "datasets==4.0.0",
+  "dill==0.3.7",
+  "dotenv==0.9.9",
+  "filelock==3.19.1",
+  "frozenlist==1.7.0",
+  "fsspec==2023.10.0",
+  "hf-xet==1.1.9",
+  "huggingface-hub==0.34.4",
+  "idna==3.10",
+  "langdetect==1.0.9",
+  "mainpipe @ git+https://github.com/mahyar-jahaninasab/data_pipeline.git@9dbe72349cc96ec70634d2782309181ae27a84ed",
+  "multidict==6.6.4",
+  "multiprocess==0.70.15",
+  "numpy==2.3.2",
+  "packaging==25.0",
+  "pandas==2.3.2",
+  "propcache==0.3.2",
+  "pyarrow==21.0.0",
+  "pyarrow-hotfix==0.7",
+  "python-dateutil==2.9.0.post0",
+  "python-dotenv==1.1.1",
+  "pytz==2025.2",
+  "PyYAML==6.0.2",
+  "requests==2.32.5",
+  "six==1.17.0",
+  "tokenizers==0.22.0",
+  "tqdm==4.67.1",
+  "typing_extensions==4.15.0",
+  "tzdata==2025.2",
+  "urllib3==2.5.0",
+  "xxhash==3.5.0",
+  "yarl==1.20.1",
+  "zstandard==0.24.0",
+]
+[tool.setuptools.packages.find]
+where = ["src"]
